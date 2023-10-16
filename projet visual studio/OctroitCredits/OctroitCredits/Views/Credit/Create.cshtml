@@ -1,0 +1,77 @@
+﻿@model OctroitCredits.Models.CreditModel
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>CreditModel</h4>
+<hr />
+<div class="row">
+    
+        <form asp-action="Create">
+            <div class="col-md-4">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="clientId" class="control-label"></label>
+                    <select asp-for="clientId" asp-items="@ViewBag.listesclient" class="form-control">
+                        <option value="">Selectionner le client</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label asp-for="compteId" class="control-label"></label>
+                    <select asp-for="compteId" asp-items="@ViewBag.listescompte" class="form-control">
+                        <option value="">Selectionner le numero compte</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label asp-for="montant" class="control-label"></label>
+                    <input  asp-for="montant" class="form-control" />
+                    <span asp-validation-for="montant" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="duree" class="control-label"></label>
+                    <input asp-for="duree" class="form-control" />
+                    <span asp-validation-for="duree" class="text-danger"></span>
+                </div>
+                </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="taux_interet" class="control-label"></label>
+                    <input asp-for="taux_interet" class="form-control" />
+                    <span asp-validation-for="taux_interet" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="statut" class="control-label"></label>
+                    <select asp-for="statut" class="form-control">
+                        <option value="approuver">Approuver</option>
+                        <option value="antente">En Attente</option>
+                        <option value="rejeter">Rejeter</option>
+                    </select>
+                                 
+                </div>
+                <div class="form-group">
+                    <label asp-for="relevespaie" class="control-label"></label>
+                    <input asp-for="relevespaie" class="form-control" />
+                    <span asp-validation-for="relevespaie" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="datecredit" class="control-label"></label>
+                    <input asp-for="datecredit" class="form-control" />
+                    <span asp-validation-for="datecredit" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </div>
+   </form>
+   
+</div>
+
+
+    <a asp-action="Index">Back to List</a>
+
+

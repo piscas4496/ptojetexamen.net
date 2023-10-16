@@ -1,0 +1,54 @@
+﻿@model OctroitCredits.Models.CompteModel
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>CompteModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="clientId" class="control-label"></label>
+                <select asp-for="clientId" asp-items="@ViewBag.listesclient" class="form-control">
+                    <option value="">Selectionner le client</option>
+                </select>
+            </div>
+           
+            <div class="form-group">
+                <label asp-for="numCompte" class="control-label"></label>
+                <input asp-for="numCompte" class="form-control" />
+                <span asp-validation-for="numCompte" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="montant" class="control-label"></label>
+                <input type="number" asp-for="montant" class="form-control" />
+                <span asp-validation-for="montant" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="libelle" class="control-label"></label>
+                <input asp-for="libelle" class="form-control" />
+                <span asp-validation-for="libelle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="dateOperation" class="control-label"></label>
+                <input asp-for="dateOperation" class="form-control" />
+                <span asp-validation-for="dateOperation" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+

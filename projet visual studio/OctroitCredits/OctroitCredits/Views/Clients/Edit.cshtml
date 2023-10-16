@@ -1,0 +1,89 @@
+﻿@model OctroitCredits.Models.ClientModel
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Edit</h1>
+
+<h4>ClientModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Id" class="control-label"></label>
+                <input asp-for="Id" class="form-control" />
+                <span asp-validation-for="Id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Noms" class="control-label"></label>
+                <input asp-for="Noms" class="form-control" />
+                <span asp-validation-for="Noms" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Sexe" class="control-label"></label>
+                <select asp-for="Noms" class="form-control">
+                    <option value="Homme">Homme</option>
+                    <option value="Femme">Femme</option>
+                </select>
+                <span asp-validation-for="Sexe" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Datenaiss" class="control-label"></label>
+                <input asp-for="Datenaiss" class="form-control" />
+                <span asp-validation-for="Datenaiss" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Adresse" class="control-label"></label>
+                <input asp-for="Adresse" class="form-control" />
+                <span asp-validation-for="Adresse" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Etatcivil" class="control-label"></label>
+                <select asp-for="Etatcivil" class="form-control">
+                    <option value="Célibataire">Célibataire</option>
+                    <option value="Marié">Marié</option>
+                    <option value="Divorcé">Divorcé(e)</option>
+                </select>
+                <span asp-validation-for="Etatcivil" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Telephone" class="control-label"></label>
+                <input asp-for="Telephone" class="form-control" />
+                <span asp-validation-for="Telephone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Mail" class="control-label"></label>
+                <input asp-for="Mail" class="form-control" />
+                <span asp-validation-for="Mail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Profession" class="control-label"></label>
+                <input asp-for="Profession" class="form-control" />
+                <span asp-validation-for="Profession" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Adressepostal" class="control-label"></label>
+                <input asp-for="Adressepostal" class="form-control" />
+                <span asp-validation-for="Adressepostal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Nationalite" class="control-label"></label>
+                <input asp-for="Nationalite" class="form-control" />
+                <span asp-validation-for="Nationalite" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+

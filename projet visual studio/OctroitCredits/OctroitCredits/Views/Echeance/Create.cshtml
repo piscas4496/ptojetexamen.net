@@ -1,0 +1,56 @@
+﻿@model OctroitCredits.Models.EcheanceModel
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>EcheanceModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="clientId" class="control-label"></label>
+                <select asp-for="clientId" asp-items="@ViewBag.listesclient" class="form-control">
+                    <option value="">Selectionner le client</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label asp-for="creditId" class="control-label"></label>
+                <select asp-for="creditId" asp-items="@ViewBag.listescredits" class="form-control">
+                    <option value="">Selectionner le credit</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="montantcredit" class="control-label"></label>
+                <input type="number" asp-for="montantcredit" class="form-control" />
+                <span asp-validation-for="montantcredit" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="montantpayer" class="control-label"></label>
+                <input type="number" asp-for="montantpayer" class="form-control" />
+                <span asp-validation-for="montantpayer" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="dateEcheance" class="control-label"></label>
+                <input asp-for="dateEcheance" class="form-control" />
+                <span asp-validation-for="dateEcheance" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+

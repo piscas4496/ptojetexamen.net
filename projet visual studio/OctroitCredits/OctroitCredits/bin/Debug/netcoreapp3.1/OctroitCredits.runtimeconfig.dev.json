@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\pis\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\pis\\.nuget\\packages"
+    ]
+  }
+}

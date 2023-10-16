@@ -1,0 +1,55 @@
+﻿@model OctroitCredits.Models.DemmandeModel
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>DemmandeModel</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.demandeId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.demandeId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.clientId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.clientId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.montant)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.montant)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.duree)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.duree)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.motif)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.motif)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.dateDemande)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.dateDemande)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-action="Index">Back to List</a>
+</div>

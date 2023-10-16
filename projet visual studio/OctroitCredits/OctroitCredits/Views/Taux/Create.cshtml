@@ -1,0 +1,42 @@
+﻿@model OctroitCredits.Models.TauxModel
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>TauxModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4 ml-5">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+           
+            <div class="form-group">
+                <label asp-for="Categoriecredit" class="control-label"></label>
+                <input asp-for="Categoriecredit" class="form-control" />
+                <span asp-validation-for="Categoriecredit" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Taux_annuel" class="control-label"></label>
+                <input asp-for="Taux_annuel" class="form-control" />
+                <span asp-validation-for="Taux_annuel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Taux_mensuel" class="control-label"></label>
+                <input asp-for="Taux_mensuel" class="form-control" />
+                <span asp-validation-for="Taux_mensuel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

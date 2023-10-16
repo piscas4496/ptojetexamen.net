@@ -1,0 +1,113 @@
+﻿@model IEnumerable<OctroitCredits.Models.ClientModel>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="data-table-area mg-b-15">
+    <div class="container-fluid">
+        <div class="row">
+            <br /><br /><br />
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="sparkline13-list">
+                    <div class="sparkline13-hd">
+                        <div class="main-sparkline13-hd">
+                            
+                            <h1>Projects <span class="table-project-n">Data</span> Table</h1>
+                        </div>
+                        <div>
+                            <a class="btn btn-primary" asp-action="Create">Create New</a>
+                        </div>
+                    </div>
+                    <div class="sparkline13-graph">
+                        <div class="datatable-dashv1-list custom-datatable-overright">
+                            <div id="toolbar">
+                                <select class="form-control dt-tb">
+
+                                    <option value="">Export Basic</option>
+                                    <option value="all">Export All</option>
+                                    <option value="selected">Export Selected</option>
+                                </select>
+                            </div>
+                            <table id="table" data-toggle="table" data-pagination="true" data-search="true" data-show-columns="true" data-show-pagination-switch="true" data-show-refresh="true" data-key-events="true" data-show-toggle="true" data-resizable="true" data-cookie="true"
+                                   data-cookie-id-table="saveId" data-show-export="true" data-click-to-select="true" data-toolbar="#toolbar">
+                                <thead>
+                                    <tr>
+                                        <th data-field="state" data-checkbox="true"></th>
+                                        <th data-field="id">ID</th>
+                                        <th data-field="Noms Client" data-editable="true">Genre Client</th>
+                                        <th data-field="email" data-editable="true">Date de naissance Client</th>
+                                        <th data-field="phone" data-editable="true">Adresse</th>
+                                        <th data-field="complete">Etat Civile</th>
+                                        <th data-field="task" data-editable="true">Telephone</th>
+                                        <th data-field="date" data-editable="true">Adresse Mail</th>
+                                        <th data-field="price" data-editable="true">Proffession</th>
+                                        <th data-field="price" data-editable="true">Adresse Postal</th>
+                                        <th data-field="price" data-editable="true">Nationalite</th>
+                                        <th data-field="action">Action Toutes les opration</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Id)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Noms)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Sexe)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Datenaiss)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Adresse)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Etatcivil)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Telephone)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Mail)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Profession)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Adressepostal)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Nationalite)
+                                            </td>
+                                            <td>
+                                                @Html.ActionLink("Edit", "Edit", new { id = item.Id },new { @class="btn btn-primary"})
+                                                @Html.ActionLink("Details", "Details", new { id = item.Id }, new { @class = "btn btn-primary" })
+                                                @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "btn btn-danger"})
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<!-- Static Table End -->
